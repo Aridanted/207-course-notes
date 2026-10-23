@@ -22,7 +22,7 @@ public class Temperature {
    *
    * @param celsius the temperature in degrees Celsius
    */
-  public Temperature(double celsius) {
+  private Temperature(double celsius) {
     this.celsius = celsius;
   }
 
@@ -51,8 +51,7 @@ public class Temperature {
    * @return a Temperature representing that value
    */
   public static Temperature fromCelsius(double celsius) {
-    // TODO: return a Temperature for this Celsius value.
-    return null;
+    return new Temperature(celsius);
   }
 
   /**
@@ -63,8 +62,7 @@ public class Temperature {
    * @return a Temperature representing that value
    */
   public static Temperature fromFahrenheit(double fahrenheit) {
-    // TODO: convert Fahrenheit to Celsius, (fahrenheit - 32) * 5 / 9, and return
-    //       a Temperature for it.
-    return null;
+    double celsius = (fahrenheit - 32) * 5 / 9;
+    return new Temperature(celsius);
   }
 }
